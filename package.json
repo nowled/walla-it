@@ -1,0 +1,11 @@
+{
+  "name": "walla-it",
+  "version": "1.0.0",
+  "description": "An Application To Allow users to discuss and share content about jobs in the middle east",
+  "main": "app.js",
+  "scripts": {
+    "test": "export NODE_ENV=test&& jasmine"
+  },
+  "author": "Chaz-The-Man",
+  "license": "ISC"
+}
