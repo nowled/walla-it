@@ -7,15 +7,19 @@ describe("routes : static", () => {
   //#1
   describe("GET /", () => {
 
-    //#2
-    it("should return status code 200", (done) => {
+    // beforeEach(function () {
+    //   originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+    //   jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000000;
+    // });
+    // //#2
+    it("should return status code 200", () => {
 
       //#3
       request.get(base, (err, res, body) => {
         expect(res.statusCode).toBe(200);
 
         //#4
-        done();
+
       });
     });
 
