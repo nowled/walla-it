@@ -2,6 +2,9 @@
   "name": "walla-it",
   "version": "1.0.0",
   "description": "An Application To Allow users to discuss and share content about jobs in the middle east",
+  "engines": {
+    "node": "14.2.0"
+  },
   "main": "server.js",
   "scripts": {
     "test": "export NODE_ENV=test&& jasmine",
