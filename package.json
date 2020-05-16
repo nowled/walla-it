@@ -2,10 +2,23 @@
   "name": "walla-it",
   "version": "1.0.0",
   "description": "An Application To Allow users to discuss and share content about jobs in the middle east",
-  "main": "app.js",
+  "engines": {
+    "node": "14.2.0"
+  },
+  "main": "server.js",
   "scripts": {
-    "test": "export NODE_ENV=test&& jasmine"
+    "test": "export NODE_ENV=test&& jasmine",
+    "start": "node src/server.js"
   },
   "author": "Chaz-The-Man",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "request": "^2.88.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
 }
