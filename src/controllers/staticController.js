@@ -1,5 +1,7 @@
 module.exports = {
   index(req, res, next) {
-    res.send("Welcome to Walla-it");
+    res.render("static/index", {
+      title: "Welcome to Walla-It"
+    });
   }
 }

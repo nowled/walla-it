@@ -7,18 +7,12 @@ describe("routes : static", () => {
 
   describe("GET /", () => {
 
-    // beforeEach(function () {
-    //   originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    //   jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000000;
-    // });
+
     // //#2
-    it("should return status code 200", () => {
-
-
+    it("should return status code 200 and have 'Welcome to Walla-It' in the body of the response", (done) => {
       request.get(base, (err, res, body) => {
         expect(res.statusCode).toBe(200);
-
-
+        expect(body).toContain("Welcome to Walla-It");
 
       });
     });
