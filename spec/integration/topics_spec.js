@@ -5,8 +5,6 @@ const sequelize = require("../../src/db/models/index").sequelize;
 const Topic = require("../../src/db/models").Topic;
 
 describe("routes : topics", () => {
-
-  //#2
   beforeEach((done) => {
     this.topic;
     sequelize.sync({
@@ -14,7 +12,7 @@ describe("routes : topics", () => {
     }).then((res) => {
 
       Topic.create({
-          title: "JS Frameworks",
+          title: "Middle East Teaching Jobs",
           description: "There is a lot of them"
         })
         .then((topic) => {
@@ -25,23 +23,21 @@ describe("routes : topics", () => {
           console.log(err);
           done();
         });
-    })
+
+    });
+
   });
+
   describe("GET /topics", () => {
 
-
-
     it("should return a status code 200 and all topics", (done) => {
-
-      //#3
       request.get(base, (err, res, body) => {
         expect(res.statusCode).toBe(200);
         expect(err).toBeNull();
         expect(body).toContain("Topics");
-        expect(body).toContain("JS Frameworks");
+        expect(body).toContain("Middle East Teaching Jobs");
         done();
       });
     });
   });
-
 });
